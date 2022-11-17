@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import NavTabs from './NavBar/NavTabs/NavTabs';
-import AboutMe from './Pages/AboutMe';
-import Portfolio from './Pages/Projects';
-import ContactMe from './Pages/ContactMe';
-import Resume from './Pages/Resume';
+import AboutMe from '../pages/AboutMe';
+import Portfolio from '../pages/Projects';
+import ContactMe from '../pages/ContactMe';
+import Resume from '../pages/Resume';
 
 
 export default function MainContainer() {
