@@ -4,6 +4,7 @@ import Portfolio from './pages/Projects';
 import ContactMe from './pages/ContactMe';
 import Resume from './pages/Resume';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('About Me');
@@ -34,6 +35,7 @@ function App() {
     <main>
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
+      <Footer/>
     </main>
   );
 }
