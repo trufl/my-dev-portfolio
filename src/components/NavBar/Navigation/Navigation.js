@@ -1,5 +1,5 @@
-function NavTabs({ currentPage, handlePageChange }) {
-  const labels = ['About Me', 'Portfolio', 'Contact Me', 'Resume']
+function Navigation({ currentPage, handlePageChange }) {
+  const labels = ['About Me', 'Projects', 'Resume']
 
   return (
     <>
@@ -19,4 +19,4 @@ function NavTabs({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavTabs;
+export default Navigation;

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import AboutMe from './pages/AboutMe';
-import Portfolio from './pages/Projects';
-import ContactMe from './pages/ContactMe';
+import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,12 +13,9 @@ function App() {
       case 'About Me':
         document.title = currentPage;
         return <AboutMe />;
-      case 'Portfolio':
+      case 'Projects':
         document.title = currentPage;
-        return <Portfolio />;
-      case 'Contact Me':
-        document.title = currentPage;
-        return <ContactMe />;
+        return <Projects />;
       case 'Resume':
         document.title = currentPage;
         return <Resume />;
@@ -31,12 +27,13 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-
-    <main>
+    <>
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
+      <main>
+        {renderPage()}
+      </main>
       <Footer/>
-    </main>
+    </>
   );
 }
 
