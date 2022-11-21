@@ -7,7 +7,7 @@ function ResumeContainer() {
         <>
             <Spacer y={2}/>
             <Grid.Container justify='center'>
-                <Button>
+                <Button auto rounded>
                     <a target="_blank" rel='noreferrer' href={pdf}><Text>Download My Resume</Text></a>
                 </Button>
             </Grid.Container>

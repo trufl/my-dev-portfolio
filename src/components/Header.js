@@ -1,28 +1,26 @@
 import NavBar from "./NavBar/NavBar";
-import { Navbar, Text, Spacer, Grid } from '@nextui-org/react';
+import { Navbar, Text, Grid, Col } from '@nextui-org/react';
 
 function Header ({ currentPage, handlePageChange }) {
     return(
         <header>
             <Grid.Container>
                 <Navbar isBordered variant='static'>
-                <div>
-                    
+                <Grid xs>
                     <Navbar.Brand>
-                        <Grid>
+                        <Col>
                             <Text b h1 size={30} >
                                 Tristan Saragosa
                             </Text>
-                        </Grid>
-                        <Spacer/>
-                        <Text>
-                            Full Stack Web Developer
-                        </Text>
+                            <Text>
+                                Full Stack Web Developer
+                            </Text>
+                        </Col>
                     </Navbar.Brand>
-                </div>
-                <div>
+                </Grid>
+                <Grid>
                     <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-                </div>
+                </Grid>
                 </Navbar>
             </Grid.Container>
         </header>

@@ -1,5 +1,7 @@
-import { useTheme as useNextTheme } from 'next-themes'
-import { Switch, useTheme } from '@nextui-org/react'
+import { useTheme as useNextTheme } from 'next-themes';
+import { Switch, useTheme, Image } from '@nextui-org/react';
+import sun from '../../../images/sun.png';
+import moon from '../../../images/moon.png';
 
 function Navigation({ currentPage, handlePageChange }) {
   const { setTheme } = useNextTheme();
@@ -23,8 +25,17 @@ function Navigation({ currentPage, handlePageChange }) {
       }
       <Switch
         checked={isDark}
+        shadow
+        bordered
         onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
       />
+      <Image
+      width={24}
+      height={24}  
+      src={ isDark ? moon : sun }
+      alt="Theme icon"
+      objectFit="scale-down"
+    />
     </>
   );
 }

@@ -5,7 +5,7 @@ function AboutMeContainer() {
         <>
             <Spacer/>
             <Grid.Container justify='center'>
-                <Grid xs={8}>
+                <Grid xs={11}>
                     <Card isHoverable>
                     <Card.Header>
                         <Text h2>
