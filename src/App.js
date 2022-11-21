@@ -1,10 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
-import MainContainer from './components/MainContainer';
+import { useState } from 'react';
+import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import AboutMe from './pages/AboutMe';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('About Me');
+  const lightTheme = createTheme({ type: 'light' });
+  const darkTheme = createTheme({ type: 'dark' });
+  
+  const renderPage = () => {
+    switch(currentPage){
+      case 'About Me':
+        document.title = currentPage;
+        return <AboutMe />;
+      case 'Projects':
+        document.title = currentPage;
+        return <Projects />;
+      case 'Resume':
+        document.title = currentPage;
+        return <Resume />;
+      default:
+        break;
+    }
+  };
+
+  const handlePageChange = (page) => setCurrentPage(page);
+
   return (
-    <MainContainer />
+    <NextThemesProvider
+    defaultTheme="system"
+    attribute="class"
+    value={{
+      light: lightTheme.className,
+      dark: darkTheme.className
+    }}
+    >
+      <NextUIProvider>
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+        <main>
+          {renderPage()}
+        </main>
+        <Footer/>
+      </NextUIProvider>
+    </NextThemesProvider>
   );
 }
 
