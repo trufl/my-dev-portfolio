@@ -6,9 +6,12 @@ function ResumeContainer() {
     return (
         <>
             <Spacer y={2}/>
-            <Button>
-                <a target="_blank" rel='noreferrer' href={pdf}><Text>Download My Resume</Text></a>
-            </Button>
+            <Grid.Container justify='center'>
+                <Button>
+                    <a target="_blank" rel='noreferrer' href={pdf}><Text>Download My Resume</Text></a>
+                </Button>
+            </Grid.Container>
+            <Spacer y={2}/>
             <Grid.Container justify='center' gap={2}>
                 <Grid xs md={5}>
                     <Card isHoverable>
@@ -20,31 +23,35 @@ function ResumeContainer() {
                         <Card.Divider/>
                         <Card.Body>
                             <ul>
-                                <li><Text b>HTML</Text></li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>React</li>
-                                <li>jQuery</li>
-                                <li>React</li>
-                                <li>Bootstrap</li>
-                                <li>Tailwind</li>
+                                <li><Text b size="$xl">HTML</Text></li>
+                                <li><Text b size="$xl">CSS</Text></li>
+                                <li><Text b size="$xl">JavaScript</Text></li>
+                                <li><Text b size="$xl">React</Text></li>
+                                <li><Text b size="$xl">jQuery</Text></li>
+                                <li><Text b size="$xl">React</Text></li>
+                                <li><Text b size="$xl">Bootstrap</Text></li>
+                                <li><Text b size="$xl">Tailwind</Text></li>
                             </ul>
                         </Card.Body>
                     </Card>
                 </Grid>
                 <Grid xs md={5}>
                     <Card isHoverable>
-                        <Card.Header>Back-End Proficiencies</Card.Header>
+                        <Card.Header>
+                            <Text h2>
+                                Back-End Proficiencies
+                            </Text>
+                        </Card.Header>
                         <Card.Divider/>
                         <Card.Body>
                             <ul>
-                                <li>Node</li>
-                                <li>Express</li>
-                                <li>MySQL + Sequelize</li>
-                                <li>MongoDB + Mongoose</li>
-                                <li>REST</li>
-                                <li>APIs</li>
-                                <li>GraphQL</li>
+                                <li><Text b size="$xl">Node</Text></li>
+                                <li><Text b size="$xl">Express</Text></li>
+                                <li><Text b size="$xl">MySQL + Sequelize</Text></li>
+                                <li><Text b size="$xl">MongoDB + Mongoose</Text></li>
+                                <li><Text b size="$xl">REST</Text></li>
+                                <li><Text b size="$xl">APIs</Text></li>
+                                <li><Text b size="$xl">GraphQL</Text></li>
                             </ul>
                         </Card.Body>
                     </Card>
