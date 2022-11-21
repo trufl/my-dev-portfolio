@@ -1,40 +1,56 @@
 import pdf from '../../images/Tristan-Saragosa.pdf';
+import { Button, Text, Card, Spacer, Grid } from '@nextui-org/react';
 
 function ResumeContainer() {
 
     return (
         <>
-            <div>
-                <aside>
-                    <button>
-                        <a target="_blank" rel='norefferer' href={pdf}>Download My Resume</a>
-                    </button>
-                </aside>
-                <h3>Front-End Proficiencies</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>jQuery</li>
-                    <li>React</li>
-                    <li>Bootstrap</li>
-                    <li>Tailwind</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Back-End Proficiencies</h3>
-                <ul>
-                    <li>Node</li>
-                    <li>Express</li>
-                    <li>MySQL + Sequelize</li>
-                    <li>MongoDB + Mongoose</li>
-                    <li>REST</li>
-                    <li>APIs</li>
-                    <li>GraphQL</li>
-                </ul>
-            </div>
-            
+            <Spacer y={2}/>
+            <Button>
+                <a target="_blank" rel='noreferrer' href={pdf}><Text>Download My Resume</Text></a>
+            </Button>
+            <Grid.Container justify='center' gap={2}>
+                <Grid xs md={5}>
+                    <Card isHoverable>
+                        <Card.Header>
+                            <Text h2>
+                                Front-End Proficiencies
+                            </Text>
+                        </Card.Header>
+                        <Card.Divider/>
+                        <Card.Body>
+                            <ul>
+                                <li><Text b>HTML</Text></li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>jQuery</li>
+                                <li>React</li>
+                                <li>Bootstrap</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </Card.Body>
+                    </Card>
+                </Grid>
+                <Grid xs md={5}>
+                    <Card isHoverable>
+                        <Card.Header>Back-End Proficiencies</Card.Header>
+                        <Card.Divider/>
+                        <Card.Body>
+                            <ul>
+                                <li>Node</li>
+                                <li>Express</li>
+                                <li>MySQL + Sequelize</li>
+                                <li>MongoDB + Mongoose</li>
+                                <li>REST</li>
+                                <li>APIs</li>
+                                <li>GraphQL</li>
+                            </ul>
+                        </Card.Body>
+                    </Card>
+                </Grid>
+            </Grid.Container>
+            <Spacer y={2}/>
         </>
     );
 }

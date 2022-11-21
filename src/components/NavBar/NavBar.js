@@ -1,10 +1,13 @@
 import Navigation from './Navigation/Navigation';
+import { Navbar} from '@nextui-org/react';
 
 
-export default function NavBar({ currentPage, handlePageChange }) {
+function NavBar({ currentPage, handlePageChange }) {
     return (
-        <ul className="nav nav-tabs">
+        <Navbar.Content enableCursorHighlight>
             <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-        </ul>
+        </Navbar.Content>
     );
 }
+
+export default NavBar;
