@@ -1,5 +1,5 @@
 import { useTheme as useNextTheme } from 'next-themes';
-import { Switch, useTheme, Image } from '@nextui-org/react';
+import { Switch, useTheme, Image, Navbar } from '@nextui-org/react';
 import sun from '../../../images/sun.png';
 import moon from '../../../images/moon.png';
 
@@ -12,16 +12,31 @@ function Navigation({ currentPage, handlePageChange }) {
 
   return (
     <>
-      { labels.map((label) => (
-          <li key={label}>
-            <a
-              href={`#${label.includes(' ') ? label.split(' ')[0].toLowerCase() + '-' + label.split(' ')[1].toLowerCase() : label.toLowerCase()}`}
-              onClick={() => handlePageChange(label)}
-            >
-              {label}
-            </a>
-          </li>
-        ))
+      { labels.map((label) => {
+        if (label === currentPage) {
+          return (
+            <Navbar.Item key={label} isActive>
+              <a
+                href={`#${label.includes(' ') ? label.split(' ')[0].toLowerCase() + '-' + label.split(' ')[1].toLowerCase() : label.toLowerCase()}`}
+                onClick={() => handlePageChange(label)}
+              >
+                {label}
+              </a>
+            </Navbar.Item>
+          );
+        } else {
+          return (
+            <Navbar.Item key={label}>
+              <a
+                href={`#${label.includes(' ') ? label.split(' ')[0].toLowerCase() + '-' + label.split(' ')[1].toLowerCase() : label.toLowerCase()}`}
+                onClick={() => handlePageChange(label)}
+              >
+                {label}
+              </a>
+            </Navbar.Item>
+          );
+        }
+      })
       }
       <Switch
         checked={isDark}
