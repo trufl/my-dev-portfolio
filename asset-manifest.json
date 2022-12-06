@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/my-dev-portfolio/static/js/main.ed905a50.js",
+    "main.js": "/my-dev-portfolio/static/js/main.dc52d304.js",
     "static/js/787.35e56987.chunk.js": "/my-dev-portfolio/static/js/787.35e56987.chunk.js",
+    "static/media/olympus.png": "/my-dev-portfolio/static/media/olympus.cb59b99e433c95df8727.png",
+    "static/media/nonsocial.png": "/my-dev-portfolio/static/media/nonsocial.a81ef63dc2ab282c4bdb.png",
     "static/media/quiz.png": "/my-dev-portfolio/static/media/quiz.93e708eb2814c7d6cf60.png",
-    "static/media/nonsocial.png": "/my-dev-portfolio/static/media/nonsocial.c1bab71002c076b65ba8.png",
     "static/media/cli-logo.png": "/my-dev-portfolio/static/media/cli-logo.998e2302c5bd3909722a.png",
-    "static/media/Card-Battle.png": "/my-dev-portfolio/static/media/Card-Battle.05b62b37a12872caf8d1.png",
-    "static/media/loading.png": "/my-dev-portfolio/static/media/loading.1d7986ac5eaeb268f8d0.png",
+    "static/media/Card-Battle.png": "/my-dev-portfolio/static/media/Card-Battle.8c5188f7704b9f9d051f.png",
     "static/media/weather.png": "/my-dev-portfolio/static/media/weather.18d2a986b60254962b79.png",
     "static/media/Tristan-Saragosa.pdf": "/my-dev-portfolio/static/media/Tristan-Saragosa.a8ca40a4f9e3cd1eecd8.pdf",
     "static/media/Twitter-logo-blue.png": "/my-dev-portfolio/static/media/Twitter-logo-blue.f963dcac51d5020e10f3.png",
     "index.html": "/my-dev-portfolio/index.html",
-    "main.ed905a50.js.map": "/my-dev-portfolio/static/js/main.ed905a50.js.map",
+    "main.dc52d304.js.map": "/my-dev-portfolio/static/js/main.dc52d304.js.map",
     "787.35e56987.chunk.js.map": "/my-dev-portfolio/static/js/787.35e56987.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.ed905a50.js"
+    "static/js/main.dc52d304.js"
   ]
 }
