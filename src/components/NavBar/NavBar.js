@@ -4,7 +4,7 @@ import { Navbar} from '@nextui-org/react';
 
 function NavBar({ currentPage, handlePageChange }) {
     return (
-        <Navbar.Content enableCursorHighlight>
+        <Navbar.Content>
             <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
         </Navbar.Content>
     );
